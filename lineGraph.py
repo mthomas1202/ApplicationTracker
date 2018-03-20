@@ -6,7 +6,7 @@ import sqlite3
 
 
 def create_line_graph():
-    py.tools.set_credentials_file(username='matt.thomas1202', api_key='XrnxEweYN4ikKVUjdKTA')
+    py.tools.set_credentials_file(username='matt.thomas1202', api_key='API_KEY')
     conn = sqlite3.connect('applications.sqlite')
     c = conn.cursor()
 
