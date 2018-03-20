@@ -22,7 +22,7 @@ def choose_options():
 
     while choice != 0:
         if choice == 1:
-            ttj.table_to_json('Application Table.xlsx')
+            ttj.table_to_json(EXCEL_FILE_TO_USE)
             jtd.update_tables()
 
         elif choice == 2:
