@@ -4,8 +4,8 @@ import pyzmail
 import re
 
 #Dictionary of emails and corresponding passwords
-EMAILS = ['matt.thomas1202@yahoo.com', 'matt.thomas1202@gmail.com', 'mrthomas@syr.edu']
-PASSWORDS = {'yahoo': '2lnhm82vo9x626883', 'gmail': '1g6kd57y28u124428', 'syr': 'MRt__1994!'}
+EMAILS = ['EMAILS']
+PASSWORDS = {'PASSWORDS'}
 
 def check_emails():
     #connect to applications database
@@ -18,6 +18,7 @@ def check_emails():
         c.execute('select distinct name from application, company where application.cid = company.cid and status is not "No" and email = %s' % email_to_check)
         companies = c.fetchall()
         #log in to correct email address
+        #I had gmail, yahoo and outlook accounts
         if 'yahoo' in email:
             imapObj = imapclient.IMAPClient('imap.mail.yahoo.com', ssl=True)
             imapObj.login(email, PASSWORDS['yahoo'])
